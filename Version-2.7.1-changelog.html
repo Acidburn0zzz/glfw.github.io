@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>GLFW - 2.7.1</title>
+		<link rel="stylesheet" type="text/css" href="css/base-min.css">
+		<link rel="stylesheet" type="text/css" href="css/grids-min.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="alternate" type="application/atom+xml" href="feed/index.xml">
+	</head>
+	<body>
+		<header class="main">
+			<div class="wrapper">
+				<div class="pure-g">
+					<div class="pure-u-1-5">
+						<a href="index.html" id="glfw_home">GLFW</a>
+					</div>
+					<div class="pure-u-4-5">
+						<nav>
+							<a href="documentation.html">Documentation</a>
+							<a href="download.html">Download</a>
+							<a href="media.html">Media</a>
+							<a href="community.html">Community</a>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+		<section>
+			<div class="wrapper">
+				<article>
+<header>
+
+<h2>2.7.1</h2>
+<small>Posted on <time datetime="2011-07-27">July 27, 2011</time>
+</small>
+
+</header>
+
+<ul>
+  <li>Clarified language in the Reference Manual concerning window hint resetting</li>
+  <li>Bugfix: The OpenGL profile and forward-compatibility window parameters were
+not set</li>
+  <li>Bugfix: The default OpenGL version in the <code class="highlighter-rouge">version</code> test was set to 1.1</li>
+  <li>Bugfix: The FSAA test did not check for the availability of
+<code class="highlighter-rouge">GL_ARB_multisample</code></li>
+  <li>Bugfix: The window could be left in a closed state but still be flagged as
+open</li>
+  <li>Bugfix: <code class="highlighter-rouge">glfwGetWindowSize</code> did not check whether GLFW was initialized or
+whether the window was open</li>
+  <li>[Cocoa] Bugfix: The loop condition for saving video modes used the wrong
+index variable</li>
+  <li>[Cocoa] Bugfix: The iconified and active window states were not tracked</li>
+  <li>[X11] Cleaned up depdendencies for <code class="highlighter-rouge">libglfw.pc</code> file</li>
+  <li>[X11] Bugfix: The <code class="highlighter-rouge">dlopen</code> fallback method for <code class="highlighter-rouge">glfwGetProcAddress</code> had been
+broken by unrelated edits</li>
+  <li>[X11] Bugfix: Calling <code class="highlighter-rouge">glXCreateContextAttribsARB</code> with an unavailable
+OpenGL version caused the application to terminate with a <code class="highlighter-rouge">BadMatch</code> Xlib
+error</li>
+  <li>[X11] Bugfix: <code class="highlighter-rouge">GLFW_WINDOW_NO_RESIZE</code> was honored in fullscreen mode</li>
+  <li>[Win32] Added Visual C++ 2010 project files for the GLFW DLL and static
+library to the <code class="highlighter-rouge">support/msvc100</code> directory</li>
+  <li>[Win32] Enabled <code class="highlighter-rouge">_GLFW_NO_DLOAD_GDI32</code> and <code class="highlighter-rouge">_GLFW_NO_DLOAD_WINMM</code> for the
+DLL build</li>
+  <li>[Win32] Bugfix: <code class="highlighter-rouge">compile.bat</code> used Unix-style line endings</li>
+  <li>[Win32] Bugfix: The <code class="highlighter-rouge">WGLSWAPINTERVALEXT_T</code>, <code class="highlighter-rouge">WGLGETEXTENSIONSSTRINGARB_T</code>
+and <code class="highlighter-rouge">WGLGETEXTENSIONSSTRINGEXT_T</code> typedefs were declared under
+<code class="highlighter-rouge">WGL_ARB_pixel_format</code></li>
+  <li>[Win32] Bugfix: The array for WGL context attributes was too small and could
+overflow</li>
+  <li>[Win32] Bugfix: Context creation using profiles did not check for the
+availability of <code class="highlighter-rouge">WGL_ARB_create_context_profile</code></li>
+  <li>[Win32] Bugfix: Context recreation logic was overly conservative, leading to
+unnecessary recreations</li>
+  <li>[Win32] Bugfix: Window focus was not handled correctly when using
+<code class="highlighter-rouge">glfwInconifyWindow</code></li>
+</ul>
+
+
+</article>
+
+			</div>
+		</section>
+		<footer>
+			<div class="wrapper">
+				<div class="pure-g-r">
+					<div class="pure-u-1-4">
+						<h4>Community</h4>
+						<ul>
+							<li><a href="community.html">IRC Channel</a></li>
+							<li><a href="http://discourse.glfw.org/">Support Forum</a></li>
+						</ul>
+					</div>
+					<div class="pure-u-1-4">
+						<h4>Development</h4>
+						<ul>
+							<li><a href="/docs/latest/">Documentation</a></li>
+							<li><a href="download.html#bindings">Language Bindings</a></li>
+							<li><a href="https://github.com/glfw">GitHub Repositories</a></li>
+						</ul>
+					</div>
+					<div class="pure-u-1-4">
+						<h4>News</h4>
+						<ul>
+							<li><a href="feed/index.xml">Atom Feed</a></li>
+							<li><a href="news.html">News Archive</a></li>
+							<li><a href="changelog.html">Version History</a></li>
+						</ul>
+					</div>
+					<div class="pure-u-1-4">
+						<h4>About</h4>
+						<ul>
+							<li><a href="faq.html">FAQ</a></li>
+							<li><a href="license.html">License</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

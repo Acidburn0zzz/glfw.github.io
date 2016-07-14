@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>GLFW - 3.0.2</title>
+		<link rel="stylesheet" type="text/css" href="css/base-min.css">
+		<link rel="stylesheet" type="text/css" href="css/grids-min.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="alternate" type="application/atom+xml" href="feed/index.xml">
+	</head>
+	<body>
+		<header class="main">
+			<div class="wrapper">
+				<div class="pure-g">
+					<div class="pure-u-1-5">
+						<a href="index.html" id="glfw_home">GLFW</a>
+					</div>
+					<div class="pure-u-4-5">
+						<nav>
+							<a href="documentation.html">Documentation</a>
+							<a href="download.html">Download</a>
+							<a href="media.html">Media</a>
+							<a href="community.html">Community</a>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+		<section>
+			<div class="wrapper">
+				<article>
+<header>
+
+<h2>3.0.2</h2>
+<small>Posted on <time datetime="2013-08-25">August 25, 2013</time>
+</small>
+
+</header>
+
+<ul>
+  <li>Allowed character callback to be triggered regardless of modifier keys</li>
+  <li>Bugfix: The <code class="highlighter-rouge">-Wall</code> flag was not used with Clang and other GCC compatibles</li>
+  <li>Bugfix: The default for <code class="highlighter-rouge">GLFW_ALPHA_BITS</code> was set to zero</li>
+  <li>Bugfix: <code class="highlighter-rouge">glfwInit</code> would segfault if monitor enumeration failed and no error
+        callback was set</li>
+  <li>[Win32] Added <code class="highlighter-rouge">_GLFW_USE_DWM_SWAP_INTERVAL</code> for forcing the swap interval
+          to be set even when DWM compositing is enabled</li>
+  <li>[Win32] Added support for forcing the use of the high-performance GPU
+          on nVidia Optimus systems</li>
+  <li>[Win32] Bugfix: The clipboard string was not freed on terminate</li>
+  <li>[Win32] Bugfix: Entry points for OpenGL 1.0 and 1.1 functions were not
+                  returned by <code class="highlighter-rouge">glfwGetProcAddress</code></li>
+  <li>[Win32] Bugfix: The <code class="highlighter-rouge">user32</code> and <code class="highlighter-rouge">dwmapi</code> module handles were not freed on
+                  library termination</li>
+  <li>[Cocoa] Added support for precise scrolling deltas on OS X 10.7 and later</li>
+  <li>[Cocoa] Enabled explicit creation of OpenGL 3.x and 4.x contexts as supported
+          by OS X 10.9</li>
+  <li>[Cocoa] Bugfix: The clipboard string was not freed on terminate</li>
+  <li>[Cocoa] Bugfix: Selectors were used that are not declared by the 10.6 SDK</li>
+  <li>[Cocoa] Bugfix: The position set by <code class="highlighter-rouge">glfwSetWindowPos</code> was incorrect</li>
+  <li>[X11] Bugfix: Override-redirect windows were resized to the desired instead
+                of the actual resolution of the selected video mode</li>
+  <li>[X11] Bugfix: Screensaver override for full screen windows had a possible
+                race condition</li>
+  <li>[X11] Bugfix: The reported window position did not account for the size of
+                the window frame on some WMs</li>
+  <li>[X11] Bugfix: The original video mode of a monitor was overwritten by calls
+                to <code class="highlighter-rouge">glfwSetWindowSize</code></li>
+  <li>[X11] Bugfix: Key release events for <code class="highlighter-rouge">GLFW_KEY_KP_5</code> were discarded.</li>
+</ul>
+
+
+
+</article>
+
+			</div>
+		</section>
+		<footer>
+			<div class="wrapper">
+				<div class="pure-g-r">
+					<div class="pure-u-1-4">
+						<h4>Community</h4>
+						<ul>
+							<li><a href="community.html">IRC Channel</a></li>
+							<li><a href="http://discourse.glfw.org/">Support Forum</a></li>
+						</ul>
+					</div>
+					<div class="pure-u-1-4">
+						<h4>Development</h4>
+						<ul>
+							<li><a href="/docs/latest/">Documentation</a></li>
+							<li><a href="download.html#bindings">Language Bindings</a></li>
+							<li><a href="https://github.com/glfw">GitHub Repositories</a></li>
+						</ul>
+					</div>
+					<div class="pure-u-1-4">
+						<h4>News</h4>
+						<ul>
+							<li><a href="feed/index.xml">Atom Feed</a></li>
+							<li><a href="news.html">News Archive</a></li>
+							<li><a href="changelog.html">Version History</a></li>
+						</ul>
+					</div>
+					<div class="pure-u-1-4">
+						<h4>About</h4>
+						<ul>
+							<li><a href="faq.html">FAQ</a></li>
+							<li><a href="license.html">License</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>GLFW - 3.2</title>
+		<link rel="stylesheet" type="text/css" href="css/base-min.css">
+		<link rel="stylesheet" type="text/css" href="css/grids-min.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="alternate" type="application/atom+xml" href="feed/index.xml">
+	</head>
+	<body>
+		<header class="main">
+			<div class="wrapper">
+				<div class="pure-g">
+					<div class="pure-u-1-5">
+						<a href="index.html" id="glfw_home">GLFW</a>
+					</div>
+					<div class="pure-u-4-5">
+						<nav>
+							<a href="documentation.html">Documentation</a>
+							<a href="download.html">Download</a>
+							<a href="media.html">Media</a>
+							<a href="community.html">Community</a>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+		<section>
+			<div class="wrapper">
+				<article>
+<header>
+
+<h2>3.2</h2>
+<small>Posted on <time datetime="2016-06-02">June  2, 2016</time>
+</small>
+
+</header>
+
+<ul>
+  <li>Added <code class="highlighter-rouge">glfwVulkanSupported</code>, <code class="highlighter-rouge">glfwGetRequiredInstanceExtensions</code>,
+<code class="highlighter-rouge">glfwGetInstanceProcAddress</code>, <code class="highlighter-rouge">glfwGetPhysicalDevicePresentationSupport</code> and
+<code class="highlighter-rouge">glfwCreateWindowSurface</code> for platform independent Vulkan support</li>
+  <li>Added <code class="highlighter-rouge">glfwSetWindowMonitor</code> for switching between windowed and full screen
+modes and updating the monitor and desired video mode of full screen windows</li>
+  <li>Added <code class="highlighter-rouge">glfwMaximizeWindow</code> and <code class="highlighter-rouge">GLFW_MAXIMIZED</code> for window maximization</li>
+  <li>Added <code class="highlighter-rouge">glfwFocusWindow</code> for giving windows input focus</li>
+  <li>Added <code class="highlighter-rouge">glfwSetWindowSizeLimits</code> and <code class="highlighter-rouge">glfwSetWindowAspectRatio</code> for setting
+absolute and relative window size limits</li>
+  <li>Added <code class="highlighter-rouge">glfwGetKeyName</code> for querying the layout-specific name of printable
+keys</li>
+  <li>Added <code class="highlighter-rouge">glfwWaitEventsTimeout</code> for waiting for events for a set amount of time</li>
+  <li>Added <code class="highlighter-rouge">glfwSetWindowIcon</code> for setting the icon of a window</li>
+  <li>Added <code class="highlighter-rouge">glfwGetTimerValue</code> and <code class="highlighter-rouge">glfwGetTimerFrequency</code> for raw timer access</li>
+  <li>Added <code class="highlighter-rouge">glfwSetJoystickCallback</code> and <code class="highlighter-rouge">GLFWjoystickfun</code> for joystick connection
+and disconnection events</li>
+  <li>Added <code class="highlighter-rouge">GLFW_NO_API</code> for creating window without contexts</li>
+  <li>Added <code class="highlighter-rouge">GLFW_INCLUDE_VULKAN</code> for including the Vulkan header</li>
+  <li>Added <code class="highlighter-rouge">GLFW_CONTEXT_CREATION_API</code>, <code class="highlighter-rouge">GLFW_NATIVE_CONTEXT_API</code> and
+<code class="highlighter-rouge">GLFW_EGL_CONTEXT_API</code> for run-time context creation API selection</li>
+  <li>Added <code class="highlighter-rouge">GLFW_CONTEXT_NO_ERROR</code> context hint for <code class="highlighter-rouge">GL_KHR_no_error</code> support</li>
+  <li>Added <code class="highlighter-rouge">GLFW_TRUE</code> and <code class="highlighter-rouge">GLFW_FALSE</code> as client API independent boolean values</li>
+  <li>Added icons to examples on Windows and OS X</li>
+  <li>Relaxed rules for native access header macros</li>
+  <li>Removed dependency on external OpenGL or OpenGL ES headers</li>
+  <li>Removed <code class="highlighter-rouge">_GLFW_USE_OPENGL</code>, <code class="highlighter-rouge">_GLFW_USE_GLESV1</code>, <code class="highlighter-rouge">_GLFW_USE_GLESV2</code>,
+<code class="highlighter-rouge">_GLFW_WGL</code>, <code class="highlighter-rouge">_GLFW_NSGL</code>, <code class="highlighter-rouge">_GLFW_GLX</code> and <code class="highlighter-rouge">_GLFW_EGL</code> configuration macros</li>
+  <li>[Win32] Added support for Windows 8.1 per-monitor DPI</li>
+  <li>[Win32] Replaced winmm with XInput and DirectInput for joystick input</li>
+  <li>[Win32] Bugfix: Window creation would segfault if video mode setting required
+                  the system to be restarted</li>
+  <li>[Win32] Bugfix: MinGW import library lacked the <code class="highlighter-rouge">lib</code> prefix</li>
+  <li>[Win32] Bugfix: Monitor connection and disconnection events were not reported
+                  when no windows existed</li>
+  <li>[Win32] Bugfix: Activating or deactivating displays in software did not
+                  trigger monitor callback</li>
+  <li>[Win32] Bugfix: No monitors were listed on headless and VMware guest systems</li>
+  <li>[Win32] Bugfix: Pressing Ctrl+Pause would report <code class="highlighter-rouge">GLFW_KEY_UNKNOWN</code></li>
+  <li>[Win32] Bugfix: Window size events would be reported in wrong order when
+                  restoring a full screen window</li>
+  <li>[Cocoa] Made joystick polling more efficient</li>
+  <li>[Cocoa] Removed support for OS X 10.6</li>
+  <li>[Cocoa] Bugfix: Full screen windows on secondary monitors were mispositioned</li>
+  <li>[Cocoa] Bugfix: Connecting a joystick that reports no name would segfault</li>
+  <li>[Cocoa] Bugfix: Modifier flags cache was not updated when window became key</li>
+  <li>[Cocoa] Bugfix: Dead key character composition did not work</li>
+  <li>[Cocoa] Bugfix: The CGL context was not released until the autorelease pool
+                  was drained by another function</li>
+  <li>[X11] Bugfix: Monitor connection and disconnection events were not reported</li>
+  <li>[X11] Bugfix: Decoding of UTF-8 text from XIM could continue past the end</li>
+  <li>[X11] Bugfix: An XKB structure was leaked during <code class="highlighter-rouge">glfwInit</code></li>
+  <li>[X11] Bugfix: XInput2 <code class="highlighter-rouge">XI_Motion</code> events interfered with the Steam overlay</li>
+  <li>[POSIX] Bugfix: An unrelated TLS key could be deleted by <code class="highlighter-rouge">glfwTerminate</code></li>
+  <li>[Linux] Made joystick polling more efficient</li>
+  <li>[WGL] Changed extension loading to only be performed once</li>
+  <li>[WGL] Removed dependency on external WGL headers</li>
+  <li>[GLX] Added <code class="highlighter-rouge">glfwGetGLXWindow</code> to query the <code class="highlighter-rouge">GLXWindow</code> of a window</li>
+  <li>[GLX] Replaced legacy drawable with <code class="highlighter-rouge">GLXWindow</code></li>
+  <li>[GLX] Removed dependency on external GLX headers</li>
+  <li>[GLX] Bugfix: NetBSD does not provide <code class="highlighter-rouge">libGL.so.1</code></li>
+  <li>[EGL] Added <code class="highlighter-rouge">_GLFW_USE_EGLPLATFORM_H</code> configuration macro for controlling
+        whether to use an existing <code class="highlighter-rouge">EGL/eglplatform.h</code> header</li>
+  <li>[EGL] Added and documented test for if the context is current on the calling
+        thread during buffer swap</li>
+  <li>[EGL] Removed dependency on external EGL headers</li>
+</ul>
+
+
+
+</article>
+
+			</div>
+		</section>
+		<footer>
+			<div class="wrapper">
+				<div class="pure-g-r">
+					<div class="pure-u-1-4">
+						<h4>Community</h4>
+						<ul>
+							<li><a href="community.html">IRC Channel</a></li>
+							<li><a href="http://discourse.glfw.org/">Support Forum</a></li>
+						</ul>
+					</div>
+					<div class="pure-u-1-4">
+						<h4>Development</h4>
+						<ul>
+							<li><a href="/docs/latest/">Documentation</a></li>
+							<li><a href="download.html#bindings">Language Bindings</a></li>
+							<li><a href="https://github.com/glfw">GitHub Repositories</a></li>
+						</ul>
+					</div>
+					<div class="pure-u-1-4">
+						<h4>News</h4>
+						<ul>
+							<li><a href="feed/index.xml">Atom Feed</a></li>
+							<li><a href="news.html">News Archive</a></li>
+							<li><a href="changelog.html">Version History</a></li>
+						</ul>
+					</div>
+					<div class="pure-u-1-4">
+						<h4>About</h4>
+						<ul>
+							<li><a href="faq.html">FAQ</a></li>
+							<li><a href="license.html">License</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

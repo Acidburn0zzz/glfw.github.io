@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>GLFW - 2.2.3</title>
+		<link rel="stylesheet" type="text/css" href="css/base-min.css">
+		<link rel="stylesheet" type="text/css" href="css/grids-min.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="alternate" type="application/atom+xml" href="feed/index.xml">
+	</head>
+	<body>
+		<header class="main">
+			<div class="wrapper">
+				<div class="pure-g">
+					<div class="pure-u-1-5">
+						<a href="index.html" id="glfw_home">GLFW</a>
+					</div>
+					<div class="pure-u-4-5">
+						<nav>
+							<a href="documentation.html">Documentation</a>
+							<a href="download.html">Download</a>
+							<a href="media.html">Media</a>
+							<a href="community.html">Community</a>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+		<section>
+			<div class="wrapper">
+				<article>
+<header>
+
+<h2>2.2.3</h2>
+<small>Posted on <time datetime="2002-10-23">October 23, 2002</time>
+</small>
+
+</header>
+
+<ul>
+  <li>Bugfix: Checking for <code class="highlighter-rouge">GL_SGIS_generate_mipmap</code> is more robust</li>
+  <li>Bugfix: <code class="highlighter-rouge">glfwLoadTexture2D</code> will now fail if no window is opened</li>
+  <li>[Win32] Bugfix: Right shift was not detected under Win 9x/ME (it is still
+not as good as under NT/2K/XP, but at least you get right shifts)</li>
+  <li>[X11] Bugfix: Visuals are now selected more accurately. For instance,
+<code class="highlighter-rouge">glfwOpenWindow</code> will no longer fail if you request a 24-bit color buffer if
+only 16-bit color visuals are available (which means that pong3d should work
+on 16-bit displays).</li>
+</ul>
+
+
+</article>
+
+			</div>
+		</section>
+		<footer>
+			<div class="wrapper">
+				<div class="pure-g-r">
+					<div class="pure-u-1-4">
+						<h4>Community</h4>
+						<ul>
+							<li><a href="community.html">IRC Channel</a></li>
+							<li><a href="http://discourse.glfw.org/">Support Forum</a></li>
+						</ul>
+					</div>
+					<div class="pure-u-1-4">
+						<h4>Development</h4>
+						<ul>
+							<li><a href="/docs/latest/">Documentation</a></li>
+							<li><a href="download.html#bindings">Language Bindings</a></li>
+							<li><a href="https://github.com/glfw">GitHub Repositories</a></li>
+						</ul>
+					</div>
+					<div class="pure-u-1-4">
+						<h4>News</h4>
+						<ul>
+							<li><a href="feed/index.xml">Atom Feed</a></li>
+							<li><a href="news.html">News Archive</a></li>
+							<li><a href="changelog.html">Version History</a></li>
+						</ul>
+					</div>
+					<div class="pure-u-1-4">
+						<h4>About</h4>
+						<ul>
+							<li><a href="faq.html">FAQ</a></li>
+							<li><a href="license.html">License</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

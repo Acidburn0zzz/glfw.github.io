@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>GLFW - 2.5</title>
+		<link rel="stylesheet" type="text/css" href="css/base-min.css">
+		<link rel="stylesheet" type="text/css" href="css/grids-min.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="alternate" type="application/atom+xml" href="feed/index.xml">
+	</head>
+	<body>
+		<header class="main">
+			<div class="wrapper">
+				<div class="pure-g">
+					<div class="pure-u-1-5">
+						<a href="index.html" id="glfw_home">GLFW</a>
+					</div>
+					<div class="pure-u-4-5">
+						<nav>
+							<a href="documentation.html">Documentation</a>
+							<a href="download.html">Download</a>
+							<a href="media.html">Media</a>
+							<a href="community.html">Community</a>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+		<section>
+			<div class="wrapper">
+				<article>
+<header>
+
+<h2>2.5</h2>
+<small>Posted on <time datetime="2005-04-15">April 15, 2005</time>
+</small>
+
+</header>
+
+<ul>
+  <li>Added the function <code class="highlighter-rouge">glfwWaitEvents</code></li>
+  <li>Added window close callback, which enables a program to prevent a user from
+closing a window with the window manager</li>
+  <li>Added window refresh callback, which is called when the window needs to be
+refreshed</li>
+  <li>Added support for loading alpha textures (<code class="highlighter-rouge">GLFW_ALPHA_MAP_BIT</code>)</li>
+  <li>Added support for the Lua programming language</li>
+  <li>Added support for the D programming language</li>
+  <li>Added support for the Pelles C compiler for Windows</li>
+  <li>Added API level support for up to eight mouse buttons</li>
+  <li>[Win32] Added support for up to five mouse buttons</li>
+  <li>[Win32] Mouse down events capture mouse input</li>
+  <li>[Win32] Bugfix: The DLL now exports <code class="highlighter-rouge">glfwSetTime</code></li>
+  <li>[Win32] Fix: The GLFW window is now placed in the upper left corner of the
+desktop working area</li>
+  <li>[Win32/X11] Bugfix: More robust check for <code class="highlighter-rouge">SwapInterval</code></li>
+  <li>[X11] Added support for USB joysticks under Linux (<code class="highlighter-rouge">/dev/input/js*</code>)</li>
+  <li>[X11] Bugfix: Added support for GLX extensions in <code class="highlighter-rouge">glfwExtensionSupported</code></li>
+  <li>[X11] Bugfix: More robust fullscreen mode (?)</li>
+  <li>[X11] Bugfix: Runtime check of XF86VidMode support for the active display</li>
+  <li>[X11] Bugfix: Some mouse button events were reported incorrectly</li>
+  <li>[MacOSX] Added support for the input char callback.</li>
+  <li>[MacOSX] Added video mode validation and duplicate elimination.</li>
+  <li>[MacOSX] Switched to a new <code class="highlighter-rouge">MakeBundle.sh</code> script</li>
+  <li>[MacOSX] Added emulation of the window refresh callback.</li>
+  <li>[MacOSX] Bugfix: The window and its associated resources are now properly
+released.</li>
+  <li>[MacOSX] Bugfix: Removed support for more than eight mouse buttons.</li>
+  <li>[x86 CPUs] Improved Intel mobile CPU detection (e.g. disables RDTSC timing
+on Centrino systems)</li>
+</ul>
+
+
+</article>
+
+			</div>
+		</section>
+		<footer>
+			<div class="wrapper">
+				<div class="pure-g-r">
+					<div class="pure-u-1-4">
+						<h4>Community</h4>
+						<ul>
+							<li><a href="community.html">IRC Channel</a></li>
+							<li><a href="http://discourse.glfw.org/">Support Forum</a></li>
+						</ul>
+					</div>
+					<div class="pure-u-1-4">
+						<h4>Development</h4>
+						<ul>
+							<li><a href="/docs/latest/">Documentation</a></li>
+							<li><a href="download.html#bindings">Language Bindings</a></li>
+							<li><a href="https://github.com/glfw">GitHub Repositories</a></li>
+						</ul>
+					</div>
+					<div class="pure-u-1-4">
+						<h4>News</h4>
+						<ul>
+							<li><a href="feed/index.xml">Atom Feed</a></li>
+							<li><a href="news.html">News Archive</a></li>
+							<li><a href="changelog.html">Version History</a></li>
+						</ul>
+					</div>
+					<div class="pure-u-1-4">
+						<h4>About</h4>
+						<ul>
+							<li><a href="faq.html">FAQ</a></li>
+							<li><a href="license.html">License</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

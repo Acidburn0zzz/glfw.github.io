@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>GLFW - 3.0</title>
+		<link rel="stylesheet" type="text/css" href="css/base-min.css">
+		<link rel="stylesheet" type="text/css" href="css/grids-min.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="alternate" type="application/atom+xml" href="feed/index.xml">
+	</head>
+	<body>
+		<header class="main">
+			<div class="wrapper">
+				<div class="pure-g">
+					<div class="pure-u-1-5">
+						<a href="index.html" id="glfw_home">GLFW</a>
+					</div>
+					<div class="pure-u-4-5">
+						<nav>
+							<a href="documentation.html">Documentation</a>
+							<a href="download.html">Download</a>
+							<a href="media.html">Media</a>
+							<a href="community.html">Community</a>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+		<section>
+			<div class="wrapper">
+				<article>
+<header>
+
+<h2>3.0</h2>
+<small>Posted on <time datetime="2013-06-12">June 12, 2013</time>
+</small>
+
+</header>
+
+<ul>
+  <li>Added <code class="highlighter-rouge">GLFWmonitor</code> and updated monitor-related functions to take a monitor
+handle</li>
+  <li>Added <code class="highlighter-rouge">glfwGetMonitors</code> and <code class="highlighter-rouge">glfwGetPrimaryMonitor</code> for enumerating available
+monitors</li>
+  <li>Added <code class="highlighter-rouge">glfwGetMonitorPos</code>, <code class="highlighter-rouge">glfwGetMonitorPhysicalSize</code> and
+<code class="highlighter-rouge">glfwGetMonitorName</code> for retrieving monitor properties</li>
+  <li>Added <code class="highlighter-rouge">glfwSetMonitorCallback</code> and <code class="highlighter-rouge">GLFWmonitorfun</code> for notification of
+changes in the set of available monitors</li>
+  <li>Added <code class="highlighter-rouge">GLFWwindow</code> and updated window-related functions and callbacks to take
+a window handle</li>
+  <li>Added <code class="highlighter-rouge">glfwSetWindowShouldClose</code> and <code class="highlighter-rouge">glfwWindowShouldClose</code> for setting and
+retrieving the window close flag</li>
+  <li>Added <code class="highlighter-rouge">glfwGetWindowPos</code> for retrieving the position of a window</li>
+  <li>Added <code class="highlighter-rouge">glfwDefaultWindowHints</code> for resetting all window hints to their
+default values</li>
+  <li>Added <code class="highlighter-rouge">glfwMakeContextCurrent</code> for making the context of the specified window
+current</li>
+  <li>Added <code class="highlighter-rouge">glfwSetErrorCallback</code>, <code class="highlighter-rouge">GLFWerrorfun</code> and error type tokens for
+receiving error notifications</li>
+  <li>Added <code class="highlighter-rouge">glfwSetWindowUserPointer</code> and <code class="highlighter-rouge">glfwGetWindowUserPointer</code> for
+per-window user pointers</li>
+  <li>Added <code class="highlighter-rouge">glfwGetVersionString</code> for determining which code paths were enabled at
+compile time</li>
+  <li>Added <code class="highlighter-rouge">glfwGetWindowMonitor</code> for querying the monitor, if any, of the
+specified window</li>
+  <li>Added <code class="highlighter-rouge">glfwGetFramebufferSize</code> and <code class="highlighter-rouge">glfwSetFramebufferSizeCallback</code> for
+receiving the current size, in pixels, of the framebuffer</li>
+  <li>Added <code class="highlighter-rouge">glfwSetWindowPosCallback</code> and <code class="highlighter-rouge">GLFWwindowposfun</code> for receiving window
+position events</li>
+  <li>Added <code class="highlighter-rouge">glfwSetWindowFocusCallback</code> and <code class="highlighter-rouge">GLFWwindowfocusfun</code> for receiving
+window focus events</li>
+  <li>Added <code class="highlighter-rouge">glfwSetWindowIconifyCallback</code> and <code class="highlighter-rouge">GLFWwindowiconifyfun</code> for receiving
+window iconification events</li>
+  <li>Added <code class="highlighter-rouge">glfwGetClipboardString</code> and <code class="highlighter-rouge">glfwSetClipboardString</code> for interacting
+with the system clipboard</li>
+  <li>Added <code class="highlighter-rouge">glfwGetJoystickName</code> for retrieving the name of a joystick</li>
+  <li>Added <code class="highlighter-rouge">glfwGetCurrentContext</code> for retrieving the window whose OpenGL context
+is current</li>
+  <li>Added <code class="highlighter-rouge">GLFW_SRGB_CAPABLE</code> for requesting sRGB capable framebuffers</li>
+  <li>Added <code class="highlighter-rouge">GLFW_CLIENT_API</code> and its values <code class="highlighter-rouge">GLFW_OPENGL_API</code> and
+<code class="highlighter-rouge">GLFW_OPENGL_ES_API</code> for selecting client API</li>
+  <li>Added <code class="highlighter-rouge">GLFW_CONTEXT_ROBUSTNESS</code> and values <code class="highlighter-rouge">GLFW_NO_ROBUSTNESS</code>,
+<code class="highlighter-rouge">GLFW_NO_RESET_NOTIFICATION</code> and <code class="highlighter-rouge">GLFW_LOSE_CONTEXT_ON_RESET</code> for
+<code class="highlighter-rouge">GL_ARB_robustness</code> support</li>
+  <li>Added <code class="highlighter-rouge">GLFW_OPENGL_REVISION</code> to make up for removal of <code class="highlighter-rouge">glfwGetGLVersion</code></li>
+  <li>Added <code class="highlighter-rouge">GLFW_INCLUDE_GLCOREARB</code> macro for including <code class="highlighter-rouge">GL/glcorearb.h</code> instead of
+<code class="highlighter-rouge">GL/gl.h</code></li>
+  <li>Added <code class="highlighter-rouge">GLFW_INCLUDE_ES1</code> macro for telling the GLFW header to use <code class="highlighter-rouge">GLES/gl.h</code>
+instead of <code class="highlighter-rouge">GL/gl.h</code></li>
+  <li>Added <code class="highlighter-rouge">GLFW_INCLUDE_ES2</code> macro for telling the GLFW header to use
+<code class="highlighter-rouge">GLES2/gl2.h</code> instead of <code class="highlighter-rouge">GL/gl.h</code></li>
+  <li>Added <code class="highlighter-rouge">GLFW_INCLUDE_NONE</code> macro for telling the GLFW header to not include
+any client API header</li>
+  <li>Added <code class="highlighter-rouge">GLFW_VISIBLE</code> window hint and parameter for controlling and polling
+window visibility</li>
+  <li>Added <code class="highlighter-rouge">GLFW_REPEAT</code> key action for repeated keys</li>
+  <li>Added scancode parameter to key callback</li>
+  <li>Added <code class="highlighter-rouge">refreshRate</code> member to <code class="highlighter-rouge">GLFWvidmode</code> struct</li>
+  <li>Added key modifier parameter to key and mouse button callbacks</li>
+  <li>Added <code class="highlighter-rouge">windows</code> simple multi-window test program</li>
+  <li>Added <code class="highlighter-rouge">sharing</code> simple OpenGL object sharing test program</li>
+  <li>Added <code class="highlighter-rouge">modes</code> video mode enumeration and setting test program</li>
+  <li>Added <code class="highlighter-rouge">threads</code> simple multi-threaded rendering test program</li>
+  <li>Added <code class="highlighter-rouge">glfw3native.h</code> header and platform-specific functions for explicit
+access to native display, window and context handles</li>
+  <li>Added <code class="highlighter-rouge">glfwSetGamma</code>, <code class="highlighter-rouge">glfwSetGammaRamp</code> and <code class="highlighter-rouge">glfwGetGammaRamp</code> functions and
+<code class="highlighter-rouge">GLFWgammaramp</code> type for monitor gamma ramp control</li>
+  <li>Added window parameter to <code class="highlighter-rouge">glfwSwapBuffers</code></li>
+  <li>Changed buffer bit depth parameters of <code class="highlighter-rouge">glfwOpenWindow</code> to window hints</li>
+  <li>Changed <code class="highlighter-rouge">glfwCreateWindow</code> and <code class="highlighter-rouge">glfwSetWindowTitle</code> to use UTF-8 encoded
+strings</li>
+  <li>Changed <code class="highlighter-rouge">glfwGetProcAddress</code> to return a (generic) function pointer</li>
+  <li>Changed <code class="highlighter-rouge">glfwGetVideoModes</code> to return a dynamic, unlimited number of video
+modes for the specified monitor</li>
+  <li>Changed cursor position to double-precision floating-point</li>
+  <li>Changed default cursor mode for fullscreen to normal</li>
+  <li>Renamed header directory <code class="highlighter-rouge">GL</code> to <code class="highlighter-rouge">GLFW</code></li>
+  <li>Renamed <code class="highlighter-rouge">glfw.h</code> to <code class="highlighter-rouge">glfw3.h</code> to avoid conflicts with 2.x series</li>
+  <li>Renamed <code class="highlighter-rouge">glfwOpenWindowHint</code> to <code class="highlighter-rouge">glfwWindowHint</code></li>
+  <li>Renamed <code class="highlighter-rouge">glfwGetWindowParam</code> to <code class="highlighter-rouge">glfwGetWindowAttrib</code></li>
+  <li>Renamed <code class="highlighter-rouge">GLFW_ACTIVE</code> to <code class="highlighter-rouge">GLFW_FOCUSED</code></li>
+  <li>Renamed <code class="highlighter-rouge">GLFW_FSAA_SAMPLES</code> to <code class="highlighter-rouge">GLFW_SAMPLES</code></li>
+  <li>Renamed <code class="highlighter-rouge">GLFW_WINDOW_NO_RESIZE</code> to <code class="highlighter-rouge">GLFW_RESIZABLE</code></li>
+  <li>Renamed <code class="highlighter-rouge">GLFW_BUILD_DLL</code> to <code class="highlighter-rouge">_GLFW_BUILD_DLL</code></li>
+  <li>Renamed <code class="highlighter-rouge">version</code> test to <code class="highlighter-rouge">glfwinfo</code></li>
+  <li>Renamed <code class="highlighter-rouge">GLFW_NO_GLU</code> to <code class="highlighter-rouge">GLFW_INCLUDE_GLU</code> and made it disabled by default</li>
+  <li>Renamed <code class="highlighter-rouge">glfwGetJoystickPos</code> to <code class="highlighter-rouge">glfwGetJoystickAxes</code> to match
+<code class="highlighter-rouge">glfwGetJoystickButtons</code></li>
+  <li>Renamed mouse position functions to cursor position equivalents</li>
+  <li>Replaced <code class="highlighter-rouge">glfwOpenWindow</code> and <code class="highlighter-rouge">glfwCloseWindow</code> with <code class="highlighter-rouge">glfwCreateWindow</code> and
+<code class="highlighter-rouge">glfwDestroyWindow</code></li>
+  <li>Replaced <code class="highlighter-rouge">glfwGetDesktopMode</code> width <code class="highlighter-rouge">glfwGetVideoMode</code></li>
+  <li>Replaced ad hoc build system with CMake</li>
+  <li>Replaced layout-dependent key codes with single, platform-independent set
+based on US layout</li>
+  <li>Replaced mouse wheel interface with two-dimensional, floating point scrolling
+interface</li>
+  <li>Replaced <code class="highlighter-rouge">glfwEnable</code> and <code class="highlighter-rouge">glfwDisable</code> with <code class="highlighter-rouge">glfwGetInputMode</code> and
+<code class="highlighter-rouge">glfwSetInputMode</code></li>
+  <li>Replaced <code class="highlighter-rouge">joystick</code> test with graphical version</li>
+  <li>Replaced automatic closing of windows with the window close flag</li>
+  <li>Removed the <code class="highlighter-rouge">GLFW_KEY_REPEAT</code> input option</li>
+  <li>Removed event auto-polling and the <code class="highlighter-rouge">GLFW_AUTO_POLL_EVENTS</code> window enable</li>
+  <li>Removed the Win32 port .def files</li>
+  <li>Removed the entire threading API</li>
+  <li>Removed the entire image loading API</li>
+  <li>Removed deprecated Carbon port</li>
+  <li>Removed registering <code class="highlighter-rouge">glfwTerminate</code> with <code class="highlighter-rouge">atexit</code></li>
+  <li>Removed <code class="highlighter-rouge">glfwSleep</code> function</li>
+  <li>Removed <code class="highlighter-rouge">glfwGetNumberOfProcessors</code> function</li>
+  <li>Removed <code class="highlighter-rouge">glfwGetGLVersion</code> function</li>
+  <li>Removed <code class="highlighter-rouge">GLFW_OPENED</code> window parameter</li>
+  <li>Removed <code class="highlighter-rouge">GLFW_WINDOW</code> and <code class="highlighter-rouge">GLFW_FULLSCREEN</code></li>
+  <li>Removed nonsensical key actions for Unicode character input</li>
+  <li>Removed <code class="highlighter-rouge">GLFWCALL</code> and <code class="highlighter-rouge">GLFWAPIENTRY</code> macros for stdcall calling convention</li>
+  <li>Removed <code class="highlighter-rouge">GLFW_ACCELERATED</code> window parameter</li>
+  <li>Removed default framebuffer attributes from <code class="highlighter-rouge">glfwGetWindowParam</code></li>
+  <li>Bugfix: The default OpenGL version in the <code class="highlighter-rouge">glfwinfo</code> test was set to 1.1</li>
+  <li>Bugfix: The OpenGL profile and forward-compatibility window parameters were
+        not saved after context creation</li>
+  <li>Bugfix: The FSAA test did not check for the availability of
+        <code class="highlighter-rouge">GL_ARB_multisample</code></li>
+  <li>Bugfix: Cursor centering upon leaving captured cursor mode was reported
+        before the mode was changed to non-captured</li>
+  <li>[Cocoa] Added support for OpenGL 3.2 core profile in 10.7 Lion and above</li>
+  <li>[Cocoa] Added support for high-DPI (Retina) monitors</li>
+  <li>[Cocoa] Added support for joysticks</li>
+  <li>[Cocoa] Postponed menu creation to first window creation</li>
+  <li>[Cocoa] Replaced <code class="highlighter-rouge">NSDate</code> time source with <code class="highlighter-rouge">mach_absolute_time</code></li>
+  <li>[Cocoa] Replaced all deprecated CoreGraphics calls with non-deprecated
+          counterparts</li>
+  <li>[Cocoa] Bugfix: The <code class="highlighter-rouge">NSOpenGLPFAFullScreen</code> pixel format attribute caused
+                  creation to fail on some machines</li>
+  <li>[Cocoa] Bugfix: <code class="highlighter-rouge">glfwCreateWindow</code> did not properly enforce the
+                  forward-compatible and context profile hints</li>
+  <li>[Cocoa] Bugfix: The loop condition for saving video modes used the wrong
+                  index variable</li>
+  <li>[Cocoa] Bugfix: The OpenGL framework was not retrieved, making
+                  <code class="highlighter-rouge">glfwGetProcAddress</code> crash</li>
+  <li>[Cocoa] Bugfix: <code class="highlighter-rouge">glfwInit</code> changed the current directory for unbundled
+                  executables</li>
+  <li>[Cocoa] Bugfix: The <code class="highlighter-rouge">GLFW_WINDOW_NO_RESIZE</code> window parameter was always zero</li>
+  <li>[Cocoa] Bugfix: The cursor position incorrectly rounded during conversion</li>
+  <li>[Cocoa] Bugfix: Cursor positioning led to nonsensical results for fullscreen
+                  windows</li>
+  <li>[Cocoa] Bugfix: The GLFW window was flagged as restorable</li>
+  <li>[X11] Added support for the <code class="highlighter-rouge">GLX_EXT_swap_control</code> and
+        <code class="highlighter-rouge">GLX_MESA_swap_control</code> extensions as alternatives to
+        <code class="highlighter-rouge">GLX_SGI_swap_control</code></li>
+  <li>[X11] Added the POSIX <code class="highlighter-rouge">CLOCK_MONOTONIC</code> time source as the preferred method</li>
+  <li>[X11] Added dependency on libm, where present</li>
+  <li>[X11] Added support for the <code class="highlighter-rouge">_NET_WM_NAME</code> and <code class="highlighter-rouge">_NET_WM_ICON_NAME</code> EWMH
+        window properties</li>
+  <li>[X11] Made client-side RandR and Xf86VidMode extensions required</li>
+  <li>[X11] Bugfix: Some window properties required by the ICCCM were not set</li>
+  <li>[X11] Bugfix: Calling <code class="highlighter-rouge">glXCreateContextAttribsARB</code> with an unavailable OpenGL
+                version caused the application to terminate with a <code class="highlighter-rouge">BadMatch</code>
+                Xlib error</li>
+  <li>[X11] Bugfix: A synchronization point necessary for jitter-free locked cursor
+                mode was incorrectly removed</li>
+  <li>[X11] Bugfix: The window size hints were not updated when calling
+                <code class="highlighter-rouge">glfwSetWindowSize</code> on a non-resizable window</li>
+  <li>[Win32] Added support for high-DPI monitors</li>
+  <li>[Win32] Changed port to use Unicode mode only</li>
+  <li>[Win32] Removed explicit support for versions of Windows older than Windows
+          XP</li>
+  <li>[Win32] Bugfix: Window activation and iconification did not work as expected</li>
+  <li>[Win32] Bugfix: Software rasterizer pixel formats were not discarded by the
+                  <code class="highlighter-rouge">WGL_ARB_pixel_format</code> code path</li>
+  <li>[Win32] Bugfix: The array for WGL context attributes was too small and could
+                  overflow</li>
+  <li>[Win32] Bugfix: Alt+F4 hot key was not translated into <code class="highlighter-rouge">WM_CLOSE</code></li>
+  <li>[Win32] Bugfix: The <code class="highlighter-rouge">GLFW_WINDOW_NO_RESIZE</code> window parameter was always zero</li>
+  <li>[Win32] Bugfix: A test was missing for whether all available pixel formats
+                  had been disqualified</li>
+</ul>
+
+
+
+</article>
+
+			</div>
+		</section>
+		<footer>
+			<div class="wrapper">
+				<div class="pure-g-r">
+					<div class="pure-u-1-4">
+						<h4>Community</h4>
+						<ul>
+							<li><a href="community.html">IRC Channel</a></li>
+							<li><a href="http://discourse.glfw.org/">Support Forum</a></li>
+						</ul>
+					</div>
+					<div class="pure-u-1-4">
+						<h4>Development</h4>
+						<ul>
+							<li><a href="/docs/latest/">Documentation</a></li>
+							<li><a href="download.html#bindings">Language Bindings</a></li>
+							<li><a href="https://github.com/glfw">GitHub Repositories</a></li>
+						</ul>
+					</div>
+					<div class="pure-u-1-4">
+						<h4>News</h4>
+						<ul>
+							<li><a href="feed/index.xml">Atom Feed</a></li>
+							<li><a href="news.html">News Archive</a></li>
+							<li><a href="changelog.html">Version History</a></li>
+						</ul>
+					</div>
+					<div class="pure-u-1-4">
+						<h4>About</h4>
+						<ul>
+							<li><a href="faq.html">FAQ</a></li>
+							<li><a href="license.html">License</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>GLFW - 3.1.1</title>
+		<link rel="stylesheet" type="text/css" href="css/base-min.css">
+		<link rel="stylesheet" type="text/css" href="css/grids-min.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="alternate" type="application/atom+xml" href="feed/index.xml">
+	</head>
+	<body>
+		<header class="main">
+			<div class="wrapper">
+				<div class="pure-g">
+					<div class="pure-u-1-5">
+						<a href="index.html" id="glfw_home">GLFW</a>
+					</div>
+					<div class="pure-u-4-5">
+						<nav>
+							<a href="documentation.html">Documentation</a>
+							<a href="download.html">Download</a>
+							<a href="media.html">Media</a>
+							<a href="community.html">Community</a>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+		<section>
+			<div class="wrapper">
+				<article>
+<header>
+
+<h2>3.1.1</h2>
+<small>Posted on <time datetime="2015-03-19">March 19, 2015</time>
+</small>
+
+</header>
+
+<ul>
+  <li>Made library compilation fail if any header option macros are defined</li>
+  <li>Removed support for LCC and Borland C++</li>
+  <li>Bugfix: <code class="highlighter-rouge">glfwSetTime</code> silently accepted invalid values</li>
+  <li>[Cocoa] Bugfix: <code class="highlighter-rouge">NSHighResolutionCapable</code> was not enabled for test and
+                  example programs</li>
+  <li>[Cocoa] Bugfix: <code class="highlighter-rouge">glfwSetWindowSize</code> did not change the video mode for full
+                  screen windows</li>
+  <li>[X11] Added support for Cygwin-X</li>
+  <li>[X11] Made XInput2 optional at compile-time</li>
+  <li>[X11] Made Xxf86vm optional at compile-time</li>
+  <li>[X11] Bugfix: Moved <code class="highlighter-rouge">_NET_REQUEST_FRAME_EXTENTS</code> request to
+                <code class="highlighter-rouge">glfwGetWindowFrameSize</code> and added protocol-breaking timeout
+                as a workaround for broken support in Unity, Fluxbox and Xfwm</li>
+  <li>[X11] Bugfix: Mouse button <code class="highlighter-rouge">GLFW_MOUSE_BUTTON_4</code> was never used</li>
+  <li>[X11] Bugfix: <code class="highlighter-rouge">glfwTerminate</code> could close an unrelated file descriptor</li>
+  <li>[X11] Bugfix: Some WMs (KWM, Fluxbox) did not respect cursor redefinition</li>
+  <li>[WGL] Bugfix: The context flags debug bit was not set for OpenGL ES</li>
+  <li>[GLX] Bugfix: The context flags debug bit was not set for OpenGL ES</li>
+  <li>[EGL] Bugfix: The context flags debug bit was not set for OpenGL ES</li>
+</ul>
+
+
+
+</article>
+
+			</div>
+		</section>
+		<footer>
+			<div class="wrapper">
+				<div class="pure-g-r">
+					<div class="pure-u-1-4">
+						<h4>Community</h4>
+						<ul>
+							<li><a href="community.html">IRC Channel</a></li>
+							<li><a href="http://discourse.glfw.org/">Support Forum</a></li>
+						</ul>
+					</div>
+					<div class="pure-u-1-4">
+						<h4>Development</h4>
+						<ul>
+							<li><a href="/docs/latest/">Documentation</a></li>
+							<li><a href="download.html#bindings">Language Bindings</a></li>
+							<li><a href="https://github.com/glfw">GitHub Repositories</a></li>
+						</ul>
+					</div>
+					<div class="pure-u-1-4">
+						<h4>News</h4>
+						<ul>
+							<li><a href="feed/index.xml">Atom Feed</a></li>
+							<li><a href="news.html">News Archive</a></li>
+							<li><a href="changelog.html">Version History</a></li>
+						</ul>
+					</div>
+					<div class="pure-u-1-4">
+						<h4>About</h4>
+						<ul>
+							<li><a href="faq.html">FAQ</a></li>
+							<li><a href="license.html">License</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

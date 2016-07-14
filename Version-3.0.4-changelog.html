@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>GLFW - 3.0.4</title>
+		<link rel="stylesheet" type="text/css" href="css/base-min.css">
+		<link rel="stylesheet" type="text/css" href="css/grids-min.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="alternate" type="application/atom+xml" href="feed/index.xml">
+	</head>
+	<body>
+		<header class="main">
+			<div class="wrapper">
+				<div class="pure-g">
+					<div class="pure-u-1-5">
+						<a href="index.html" id="glfw_home">GLFW</a>
+					</div>
+					<div class="pure-u-4-5">
+						<nav>
+							<a href="documentation.html">Documentation</a>
+							<a href="download.html">Download</a>
+							<a href="media.html">Media</a>
+							<a href="community.html">Community</a>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+		<section>
+			<div class="wrapper">
+				<article>
+<header>
+
+<h2>3.0.4</h2>
+<small>Posted on <time datetime="2013-12-31">December 31, 2013</time>
+</small>
+
+</header>
+
+<ul>
+  <li>Added the <code class="highlighter-rouge">GLFW_BUILD_DOCS</code> CMake option for controlling whether the
+documentation is built</li>
+  <li>Added the <code class="highlighter-rouge">_GLFW_USE_CONFIG_H</code> configuration macro for controlling whether to
+include the configuration header</li>
+  <li>Moved version number macro to <code class="highlighter-rouge">internal.h</code> for easier manual compilation</li>
+  <li>Renamed configuration header to <code class="highlighter-rouge">glfw_config.h</code> to avoid conflicts</li>
+  <li>Bugfix: The <code class="highlighter-rouge">glfw3.pc</code> file did not respect the <code class="highlighter-rouge">LIB_SUFFIX</code> CMake option</li>
+  <li>Bugfix: The <code class="highlighter-rouge">joysticks</code> test would segfault if a controller had no axes</li>
+  <li>[Win32] Allowed swap interval to be explicitly set to zero on DWM systems</li>
+  <li>[Win32] Bugfix: Removed joystick axis value negation left over from GLFW 2</li>
+  <li>[Win32] Bugfix: Restoring windows using the Win+D hot key did not trigger the
+                  focus callback</li>
+  <li>[Win32] Bugfix: The disabled cursor mode clip rectangle was updated for
+                  unfocused windows</li>
+  <li>[Win32] Bugfix: Cursor was not properly re-centered over odd-sized windows</li>
+  <li>[Win32] Bugfix: Negative window positions were reported incorrectly</li>
+  <li>[Win32] Bugfix: The iconify callback was not triggered when switching away
+                  from a full screen window using Alt+Tab</li>
+  <li>[Win32] Bugfix: Resizing a window with <code class="highlighter-rouge">glfwSetWindowSize</code> gave it focus</li>
+  <li>[Cocoa] Added dependency on CoreVideo framework for refresh rate retrieval</li>
+  <li>[Cocoa] Enabled Lion full screen for resizable windowed mode windows</li>
+  <li>[Cocoa] Moved to Cocoa API for application transformation and activation</li>
+  <li>[Cocoa] Bugfix: The <code class="highlighter-rouge">GLFW_KEY_GRAVE_ACCENT</code> key was reported as
+                  <code class="highlighter-rouge">GLFW_KEY_WORLD_1</code> and vice versa</li>
+  <li>[Cocoa] Bugfix: The <code class="highlighter-rouge">GLFW_KEY_F13</code> key was reported as
+                  <code class="highlighter-rouge">GLFW_KEY_PRINT_SCREEN</code></li>
+  <li>[Cocoa] Bugfix: Implicit conversion from <code class="highlighter-rouge">NSUInteger</code> to int caused warnings
+                  with Xcode 5</li>
+  <li>[Cocoa] Bugfix: Use of undeclared selectors with <code class="highlighter-rouge">@selector</code> caused warnings
+                  with Xcode 5</li>
+  <li>[Cocoa] Bugfix: The cursor remained visible if moved onto client area after
+                  having been set to hidden outside it</li>
+  <li>[Cocoa] Bugfix: The refresh rate was zero for all modes of certain monitors</li>
+  <li>[Cocoa] Bugfix: The <code class="highlighter-rouge">install_name</code> field of the dynamic library was not set</li>
+  <li>[Cocoa] Bugfix: Full screen windows were never reported as having focus</li>
+  <li>[Cocoa] Bugfix: A superfluous I/O flag test prevented video modes from being
+                  listed for Thunderbolt monitor</li>
+  <li>[Cocoa] Bugfix: Retrieving the name of some external displays caused segfault</li>
+  <li>[Cocoa] Bugfix: The 10.9 SDK defines <code class="highlighter-rouge">GLintptrARB</code> and <code class="highlighter-rouge">GLsizeiptrARB</code>
+                  differently from the Khronos <code class="highlighter-rouge">glext.h</code></li>
+  <li>[Cocoa] Bugfix: Creating hidden windows would steal application focus</li>
+  <li>[Cocoa] Bugfix: Controllers were reported as having zero buttons and axes</li>
+  <li>[Cocoa] Bugfix: Removed joystick axis value negation left over from GLFW 2</li>
+  <li>[X11] Added setting of the <code class="highlighter-rouge">WM_CLASS</code> property to the initial window title</li>
+  <li>[X11] Added support for <code class="highlighter-rouge">_NET_WM_BYPASS_COMPOSITOR</code></li>
+  <li>[X11] Bugfix: Removed joystick axis value negation left over from GLFW 2</li>
+  <li>[X11] Bugfix: The position of hidden windows was ignored by Metacity
+                and Compiz</li>
+  <li>[X11] Bugfix: The <code class="highlighter-rouge">pthread.h</code> header was not included by the GLX platform
+                header.</li>
+</ul>
+
+
+
+</article>
+
+			</div>
+		</section>
+		<footer>
+			<div class="wrapper">
+				<div class="pure-g-r">
+					<div class="pure-u-1-4">
+						<h4>Community</h4>
+						<ul>
+							<li><a href="community.html">IRC Channel</a></li>
+							<li><a href="http://discourse.glfw.org/">Support Forum</a></li>
+						</ul>
+					</div>
+					<div class="pure-u-1-4">
+						<h4>Development</h4>
+						<ul>
+							<li><a href="/docs/latest/">Documentation</a></li>
+							<li><a href="download.html#bindings">Language Bindings</a></li>
+							<li><a href="https://github.com/glfw">GitHub Repositories</a></li>
+						</ul>
+					</div>
+					<div class="pure-u-1-4">
+						<h4>News</h4>
+						<ul>
+							<li><a href="feed/index.xml">Atom Feed</a></li>
+							<li><a href="news.html">News Archive</a></li>
+							<li><a href="changelog.html">Version History</a></li>
+						</ul>
+					</div>
+					<div class="pure-u-1-4">
+						<h4>About</h4>
+						<ul>
+							<li><a href="faq.html">FAQ</a></li>
+							<li><a href="license.html">License</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

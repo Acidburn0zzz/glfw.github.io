@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>GLFW - 3.1</title>
+		<link rel="stylesheet" type="text/css" href="css/base-min.css">
+		<link rel="stylesheet" type="text/css" href="css/grids-min.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="alternate" type="application/atom+xml" href="feed/index.xml">
+	</head>
+	<body>
+		<header class="main">
+			<div class="wrapper">
+				<div class="pure-g">
+					<div class="pure-u-1-5">
+						<a href="index.html" id="glfw_home">GLFW</a>
+					</div>
+					<div class="pure-u-4-5">
+						<nav>
+							<a href="documentation.html">Documentation</a>
+							<a href="download.html">Download</a>
+							<a href="media.html">Media</a>
+							<a href="community.html">Community</a>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+		<section>
+			<div class="wrapper">
+				<article>
+<header>
+
+<h2>3.1</h2>
+<small>Posted on <time datetime="2015-01-18">January 18, 2015</time>
+</small>
+
+</header>
+
+<ul>
+  <li>Added <code class="highlighter-rouge">GLFWcursor</code> custom system cursor handle</li>
+  <li>Added <code class="highlighter-rouge">glfwCreateCursor</code>, <code class="highlighter-rouge">glfwCreateStandardCursor</code>, <code class="highlighter-rouge">glfwDestroyCursor</code> and
+<code class="highlighter-rouge">glfwSetCursor</code> for managing system cursor images</li>
+  <li>Added <code class="highlighter-rouge">GLFWimage</code> struct for passing 32-bit RGBA images</li>
+  <li>Added monitor and adapter identifier access to native API</li>
+  <li>Added <code class="highlighter-rouge">glfwSetDropCallback</code> and <code class="highlighter-rouge">GLFWdropfun</code> for receiving dropped files</li>
+  <li>Added <code class="highlighter-rouge">glfwPostEmptyEvent</code> for allowing secondary threads to cause
+<code class="highlighter-rouge">glfwWaitEvents</code> to return</li>
+  <li>Added <code class="highlighter-rouge">empty</code> test program for verifying posting of empty events</li>
+  <li>Added <code class="highlighter-rouge">glfwSetCharModsCallback</code> for receiving character events with modifiers</li>
+  <li>Added <code class="highlighter-rouge">glfwGetWindowFrameSize</code> for retrieving the size of the frame around
+the client area of a window</li>
+  <li>Added <code class="highlighter-rouge">GLFW_AUTO_ICONIFY</code> for controlling whether full screen windows
+automatically iconify (and restore the previous video mode) on focus loss</li>
+  <li>Added <code class="highlighter-rouge">GLFW_DONT_CARE</code> for indicating that any value is acceptable</li>
+  <li>Added <code class="highlighter-rouge">GLFW_DOUBLEBUFFER</code> for controlling whether to use double buffering</li>
+  <li>Added <code class="highlighter-rouge">GLFW_CONTEXT_RELEASE_BEHAVIOR</code> and values
+<code class="highlighter-rouge">GLFW_ANY_RELEASE_BEHAVIOR</code>, <code class="highlighter-rouge">GLFW_RELEASE_BEHAVIOR_FLUSH</code> and
+<code class="highlighter-rouge">GLFW_RELEASE_BEHAVIOR_NONE</code> for <code class="highlighter-rouge">GL_KHR_context_flush_control</code> support</li>
+  <li>Added <code class="highlighter-rouge">GLFW_INCLUDE_ES31</code> for including the OpenGL ES 3.1 header</li>
+  <li>Added <code class="highlighter-rouge">GLFW_FLOATING</code> for creating always-on-top windowed mode windows</li>
+  <li>Added <code class="highlighter-rouge">GLFW_FOCUSED</code> window hint for controlling initial input focus</li>
+  <li>Added <em>partial and experimental</em> support for Wayland</li>
+  <li>Added <em>partial and experimental</em> support for Mir</li>
+  <li>Changed the window state attributes (focused, iconified and visible) to query
+the system directly</li>
+  <li>Changed the default of <code class="highlighter-rouge">GLFW_REFRESH_RATE</code> to <code class="highlighter-rouge">GLFW_DONT_CARE</code> to maintain
+the default behavior</li>
+  <li>Changed static library to build as position independent code for easier use
+from the Rust language</li>
+  <li>Changed <code class="highlighter-rouge">glfwGetCursorPos</code> to query the system directly for all cursor modes
+except captured mode</li>
+  <li>Bugfix: The debug context attribute was set from <code class="highlighter-rouge">GL_ARB_debug_output</code> even
+        when a debug context had not been requested</li>
+  <li>Bugfix: The particles example was not linked against the threading library</li>
+  <li>Bugfix: The cursor was not positioned over newly created full screen windows</li>
+  <li>Bugfix: The queried cursor position was not always up-to-date</li>
+  <li>Bugfix: <code class="highlighter-rouge">glfwExtensionSupported</code> always failed for OpenGL ES 3.0 and later if
+        the library was compiled for OpenGL ES</li>
+  <li>[Cocoa] Added <code class="highlighter-rouge">_GLFW_USE_RETINA</code> to control whether windows will use the full
+          resolution on Retina displays</li>
+  <li>[Cocoa] Made content view subclass of <code class="highlighter-rouge">NSOpenGLView</code></li>
+  <li>[Cocoa] Bugfix: Using a 1x1 cursor for hidden mode caused some screen
+                  recorders to fail</li>
+  <li>[Cocoa] Bugfix: Some Core Foundation objects were leaked during joystick
+                  enumeration and termination</li>
+  <li>[Cocoa] Bugfix: One copy of each display name string was leaked</li>
+  <li>[Cocoa] Bugfix: Monitor enumeration caused a segfault if no <code class="highlighter-rouge">NSScreen</code> was
+                  found for a given <code class="highlighter-rouge">CGDisplay</code></li>
+  <li>[Cocoa] Bugfix: Modifier key events were lost if the corresponding modifier
+                  bit field was unchanged</li>
+  <li>[Cocoa] Bugfix: Joystick enumeration took hundreds of ms on some systems</li>
+  <li>[Cocoa] Bugfix: The cursor was hidden when the user resized a GLFW window</li>
+  <li>[Cocoa] Bugfix: The 10.10 Yosemite OpenGL 4.1 profile token was not used</li>
+  <li>[Cocoa] Bugfix: The generic software OpenGL renderer could be selected under
+                  certain conditions</li>
+  <li>[Cocoa] Bugfix: The virtual cursor jumped unpredictably when entering
+                  disabled cursor mode</li>
+  <li>[Win32] Enabled generation of pkg-config file for MinGW</li>
+  <li>[Win32] Removed option to require explicitly linking against <code class="highlighter-rouge">winmm.dll</code></li>
+  <li>[Win32] Bugfix: Failure to load winmm or its functions was not reported to
+                  the error callback</li>
+  <li>[Win32] Bugfix: Some keys were reported based on the current layout instead
+                  of their physical location</li>
+  <li>[Win32] Bugfix: Maximized hidden windows were restored by <code class="highlighter-rouge">glfwShowWindow</code></li>
+  <li>[Win32] Bugfix: Context re-creation was not triggered by sRGB hint</li>
+  <li>[Win32] Bugfix: Full screen windows were incorrectly sized and placed on some
+                  systems</li>
+  <li>[Win32] Bugfix: Gamma ramp functions acted on entire desktop instead of the
+                  specified monitor</li>
+  <li>[Win32] Bugfix: The wrong incorrect physical size was returned for
+                  non-primary monitors</li>
+  <li>[Win32] Bugfix: X-axis scroll offsets were inverted</li>
+  <li>[Win32] Bugfix: The Optimus HPG forcing variable was not correctly exported</li>
+  <li>[Win32] Bugfix: The iconified window state attribute was not always updated</li>
+  <li>[Win32] Bugfix: Previously focused windows with disabled cursor mode and that
+                  had been iconified by Win+D were not visible when restored</li>
+  <li>[Win32] Bugfix: The virtual cursor jumped unpredictably when entering
+                  disabled cursor mode</li>
+  <li>[X11] Added run-time support for systems lacking the XKB extension</li>
+  <li>[X11] Made GLX 1.3 the minimum supported version</li>
+  <li>[X11] Replaced <code class="highlighter-rouge">XRRGetScreenResources</code> with <code class="highlighter-rouge">XRRGetScreenResourcesCurrent</code>
+        for monitor property retrieval</li>
+  <li>[X11] Bugfix: The case of finding no usable CRTCs was not detected</li>
+  <li>[X11] Bugfix: Detection of broken Nvidia RandR gamma support did not verify
+                that at least one CRTC was present</li>
+  <li>[X11] Bugfix: A stale <code class="highlighter-rouge">_NET_SUPPORTING_WM_CHECK</code> root window property would
+                cause an uncaught <code class="highlighter-rouge">BadWindow</code> error</li>
+  <li>[X11] Bugfix: No check was made for the presence of GLX 1.3 when
+                <code class="highlighter-rouge">GLX_SGIX_fbconfig</code> was unavailable</li>
+  <li>[X11] Bugfix: The message type of ICCCM protocol events was not checked</li>
+  <li>[X11] Bugfix: <code class="highlighter-rouge">glfwDestroyWindow</code> did not flush the output buffer</li>
+  <li>[X11] Bugfix: Window frame interactions were reported as focus events</li>
+  <li>[X11] Bugfix: Workaround for legacy Compiz caused flickering during resize</li>
+  <li>[X11] Bugfix: The name pointer of joysticks were not cleared on disconnection</li>
+  <li>[X11] Bugfix: Video mode resolutions and monitor physical sizes were not
+                corrected for rotated CRTCs</li>
+  <li>[X11] Bugfix: Unicode character input ignored dead keys</li>
+  <li>[X11] Bugfix: X-axis scroll offsets were inverted</li>
+  <li>[X11] Bugfix: Full screen override redirect windows were not always
+                positioned over the specified monitor</li>
+  <li>[X11] Bugfix: Character input did not work for the default <code class="highlighter-rouge">"C"</code> locale</li>
+  <li>[X11] Bugfix: Joysticks connected after <code class="highlighter-rouge">glfwInit</code> were not detected
+                (temporary inotify solution until proper libudev solution)</li>
+</ul>
+
+
+
+</article>
+
+			</div>
+		</section>
+		<footer>
+			<div class="wrapper">
+				<div class="pure-g-r">
+					<div class="pure-u-1-4">
+						<h4>Community</h4>
+						<ul>
+							<li><a href="community.html">IRC Channel</a></li>
+							<li><a href="http://discourse.glfw.org/">Support Forum</a></li>
+						</ul>
+					</div>
+					<div class="pure-u-1-4">
+						<h4>Development</h4>
+						<ul>
+							<li><a href="/docs/latest/">Documentation</a></li>
+							<li><a href="download.html#bindings">Language Bindings</a></li>
+							<li><a href="https://github.com/glfw">GitHub Repositories</a></li>
+						</ul>
+					</div>
+					<div class="pure-u-1-4">
+						<h4>News</h4>
+						<ul>
+							<li><a href="feed/index.xml">Atom Feed</a></li>
+							<li><a href="news.html">News Archive</a></li>
+							<li><a href="changelog.html">Version History</a></li>
+						</ul>
+					</div>
+					<div class="pure-u-1-4">
+						<h4>About</h4>
+						<ul>
+							<li><a href="faq.html">FAQ</a></li>
+							<li><a href="license.html">License</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

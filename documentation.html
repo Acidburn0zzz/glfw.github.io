@@ -1,0 +1,37 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><title>GLFW - Documentation</title><link rel="stylesheet" type="text/css" href="css/base-min.css"><link rel="stylesheet" type="text/css" href="css/grids-min.css"><link rel="stylesheet" type="text/css" href="css/style.css"><link rel="alternate" type="application/atom+xml" href="feed/index.xml"></head><body> <header class="main"><div class="wrapper"><div class="pure-g"><div class="pure-u-1-5"> <a href="index.html" id="glfw_home">GLFW</a></div><div class="pure-u-4-5"> <nav> <a href="documentation.html">Documentation</a> <a href="download.html">Download</a> <a href="media.html">Media</a> <a href="community.html">Community</a> </nav></div></div></div> </header> <section><div class="wrapper"><h2 id="documentation">Documentation</h2><p>The <a href="/docs/latest/">HTML documentation</a> contains both tutorials, guides for different topics and an API reference.</p><p>The <a href="faq.html">FAQ</a> answers many commonly asked questions about the design, implementation and use of GLFW.</p><h3 id="license">License</h3><p>GLFW is under the <a href="license.html">zlib/libpng license</a>, which permits modification, distribution and use in closed source software.</p><h3 id="example-code">Example code</h3><p>Below is a short example of setting up a window and OpenGL context with GLFW. There are many more functions than those used here. For a quick introduction to GLFW, see <a href="/docs/latest/quick.html">Getting started</a> in the HTML documentation.</p><figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cp">#include &lt;GLFW/glfw3.h&gt;
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">GLFWwindow</span><span class="o">*</span> <span class="n">window</span><span class="p">;</span>
+
+    <span class="cm">/* Initialize the library */</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">glfwInit</span><span class="p">())</span>
+        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+
+    <span class="cm">/* Create a windowed mode window and its OpenGL context */</span>
+    <span class="n">window</span> <span class="o">=</span> <span class="n">glfwCreateWindow</span><span class="p">(</span><span class="mi">640</span><span class="p">,</span> <span class="mi">480</span><span class="p">,</span> <span class="s">"Hello World"</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">,</span> <span class="nb">NULL</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">window</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">glfwTerminate</span><span class="p">();</span>
+        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="cm">/* Make the window's context current */</span>
+    <span class="n">glfwMakeContextCurrent</span><span class="p">(</span><span class="n">window</span><span class="p">);</span>
+
+    <span class="cm">/* Loop until the user closes the window */</span>
+    <span class="k">while</span> <span class="p">(</span><span class="o">!</span><span class="n">glfwWindowShouldClose</span><span class="p">(</span><span class="n">window</span><span class="p">))</span>
+    <span class="p">{</span>
+        <span class="cm">/* Render here */</span>
+        <span class="n">glClear</span><span class="p">(</span><span class="n">GL_COLOR_BUFFER_BIT</span><span class="p">);</span>
+
+        <span class="cm">/* Swap front and back buffers */</span>
+        <span class="n">glfwSwapBuffers</span><span class="p">(</span><span class="n">window</span><span class="p">);</span>
+
+        <span class="cm">/* Poll for and process events */</span>
+        <span class="n">glfwPollEvents</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="n">glfwTerminate</span><span class="p">();</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure></div> </section> <footer><div class="wrapper"><div class="pure-g-r"><div class="pure-u-1-4"><h4>Community</h4><ul><li><a href="community.html">IRC Channel</a></li><li><a href="http://discourse.glfw.org/">Support Forum</a></li></ul></div><div class="pure-u-1-4"><h4>Development</h4><ul><li><a href="/docs/latest/">Documentation</a></li><li><a href="download.html#bindings">Language Bindings</a></li><li><a href="https://github.com/glfw">GitHub Repositories</a></li></ul></div><div class="pure-u-1-4"><h4>News</h4><ul><li><a href="feed/index.xml">Atom Feed</a></li><li><a href="news.html">News Archive</a></li><li><a href="changelog.html">Version History</a></li></ul></div><div class="pure-u-1-4"><h4>About</h4><ul><li><a href="faq.html">FAQ</a></li><li><a href="license.html">License</a></li></ul></div></div></div> </footer></body></html>

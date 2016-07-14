@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>GLFW - 2.7</title>
+		<link rel="stylesheet" type="text/css" href="css/base-min.css">
+		<link rel="stylesheet" type="text/css" href="css/grids-min.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="alternate" type="application/atom+xml" href="feed/index.xml">
+	</head>
+	<body>
+		<header class="main">
+			<div class="wrapper">
+				<div class="pure-g">
+					<div class="pure-u-1-5">
+						<a href="index.html" id="glfw_home">GLFW</a>
+					</div>
+					<div class="pure-u-4-5">
+						<nav>
+							<a href="documentation.html">Documentation</a>
+							<a href="download.html">Download</a>
+							<a href="media.html">Media</a>
+							<a href="community.html">Community</a>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+		<section>
+			<div class="wrapper">
+				<article>
+<header>
+
+<h2>2.7</h2>
+<small>Posted on <time datetime="2010-09-03">September  3, 2010</time>
+</small>
+
+</header>
+
+<ul>
+  <li>Added <code class="highlighter-rouge">GLFW_OPENGL_VERSION_MAJOR</code> and <code class="highlighter-rouge">GLFW_OPENGL_VERSION_MINOR</code> hints for
+versioned context creation</li>
+  <li>Added <code class="highlighter-rouge">GLFW_OPENGL_FORWARD_COMPAT</code> hint for forward compatible context
+creation</li>
+  <li>Added <code class="highlighter-rouge">GLFW_OPENGL_DEBUG_CONTEXT</code> hint for debug context creation</li>
+  <li>Added <code class="highlighter-rouge">GLFW_OPENL_PROFILE</code> hint for context creation using profiles</li>
+  <li>Added <code class="highlighter-rouge">GLFW_NO_GLU</code> macro for disabling the inclusion of the GLU header by the
+GLFW header</li>
+  <li>Added platform-independent pixel format selection (not used on Mac OS X)</li>
+  <li>Added support and symbols for several additional keys, including
+Windows/Command keys, Pause, Caps Lock and Menu</li>
+  <li>Added conservative value clamping to <code class="highlighter-rouge">glfwOpenWindowHint</code></li>
+  <li>Added a number of test programs mostly useful to developers of GLFW</li>
+  <li>Added error messages and graceful failure to example programs</li>
+  <li>Added Cocoa port for Mac OS X 10.5 Leopard and later</li>
+  <li>Added vsync to all relevant example programs</li>
+  <li>Added a rudimentary OpenGL 3.2+ core profile example program</li>
+  <li>Updated Pascal (formerly Delphi) bindings to support more compilers</li>
+  <li>Clarified and expanded the User’s Guide and Reference Manual</li>
+  <li>Fixed a number of compiler warnings in the example programs</li>
+  <li>OpenGL version is now only parsed once, at window creation time</li>
+  <li>Changed <code class="highlighter-rouge">glfwSwapBuffers</code> to call <code class="highlighter-rouge">glfwPollEvents</code> <em>after</em> buffer swap</li>
+  <li>Changed all comments in public header file to plain C style</li>
+  <li>Removed the <code class="highlighter-rouge">keytest</code> example program, as it was superseded by the <code class="highlighter-rouge">events</code>
+test</li>
+  <li>Removed deprecated AmigaOS and DOS ports</li>
+  <li>Removed all FPS counters from example programs</li>
+  <li>Removed all unmaintained language bindings</li>
+  <li>Removed support for Pelles C</li>
+  <li>Removed broken Microsoft Visual C++ 6.0 build path</li>
+  <li>[X11] Added <code class="highlighter-rouge">x11-dist-install</code> install target, intended for packagers of
+GLFW</li>
+  <li>[X11] Added <code class="highlighter-rouge">x11-dist-clean</code> build target, intended for developers of GLFW</li>
+  <li>[X11] Added support for <code class="highlighter-rouge">GLX_SGIX_fbconfig</code></li>
+  <li>[X11] Added support for user-specified compilation flags via <code class="highlighter-rouge">CFLAGS</code></li>
+  <li>[X11] Added documentation of configuration macros</li>
+  <li>[X11] Implemented support for <code class="highlighter-rouge">GLFW_SYSTEM_KEYS</code></li>
+  <li>[X11] Improved configuration and makefile creation logic</li>
+  <li>[X11] Removed support for GLX version 1.2 and below</li>
+  <li>[X11] Removed unnecessary calls to XSync</li>
+  <li>[X11] Removed use of legacy window style atoms</li>
+  <li>[X11] Bugfix: Repeated keys would sometimes leak through despite key repeat
+being disabled</li>
+  <li>[X11] Bugfix: Fullscreen window resizing would cause color buffer clearing
+without taking framebuffer objects into account</li>
+  <li>[X11] Bugfix: AltGr was not reported as right Alt</li>
+  <li>[X11] Bugfix: Window colormap was not freed</li>
+  <li>[X11] Bugfix: Close callback was called for <code class="highlighter-rouge">glfwCloseWindow</code></li>
+  <li>[X11] Bugfix: Misspelt struct member in XF86VidMode code path</li>
+  <li>[X11] Bugfix: Window decorations would not appear using certain versions of
+Compiz on Intel hardware</li>
+  <li>[X11] Bugfix: Numeric keypad key symbols would change depending on Num Lock
+state</li>
+  <li>[X11] Bugfix: Hidden cursor position snapped back when halfway from window
+center to edge</li>
+  <li>[X11] Bugfix: Not properly verifying that the window was mapped before
+making certain calls caused a <code class="highlighter-rouge">BadMatch</code> error</li>
+  <li>[X11] Bugfix: The response to <code class="highlighter-rouge">_NET_WM_PING</code> events was malformed</li>
+  <li>[X11] Bugfix: Hidden cursor mode interfered with other applications when
+GLFW window was unfocused</li>
+  <li>[X11] Bugfix: The invisible cursor objects used for hidden cursor mode were
+not freed</li>
+  <li>[X11] Bugfix: EWMH-compliant window managers were incorrectly detected</li>
+  <li>[X11] Bugfix: The EWMH code path for fullscreen windows did not present the
+window using <code class="highlighter-rouge">_NET_ACTIVE_WINDOW</code></li>
+  <li>[X11] Bugfix: The EWMH code path for fullscreen windows did not send
+a <code class="highlighter-rouge">_NET_WM_STATE</code> client message</li>
+  <li>[Carbon] Added Universal Binary build targets for all examples</li>
+  <li>[Carbon] Renamed MacOSX port to Carbon</li>
+  <li>[Carbon] Removed support for 10.2 Jaguar</li>
+  <li>[Carbon] Deprecated Carbon port</li>
+  <li>[Carbon] Bugfix: Using the Dock or menu Quit command did not call the close
+callback</li>
+  <li>[Carbon] Bugfix: Key repeat events were not caught on 10.5 Leopard</li>
+  <li>[Carbon] Bugfix: Certain keys were not reported</li>
+  <li>[Carbon] Bugfix: Missing <code class="highlighter-rouge">-m32</code> flag caused build failure on 10.6 Snow
+Leopard</li>
+  <li>[Carbon] Bugfix: Missing <code class="highlighter-rouge">-mmacosx-version-min</code> flag caused build failure on
+10.5 Leopard</li>
+  <li>[Carbon] Bugfix: <code class="highlighter-rouge">glfwOpenWindow</code> did not call <code class="highlighter-rouge">glClear</code></li>
+  <li>[Win32] Added Visual C++ project files for all examples and test programs</li>
+  <li>[Win32] Removed iterative context re-creation attempts for FSAA sample count</li>
+  <li>[Win32] Bugfix: The Visual C++ GLFW DLL project file did not use the correct
+DEF file</li>
+  <li>[Win32] Bugfix: WGL extensions were not detected and/or used correctly</li>
+  <li>[Win32] Bugfix: Improper use of <code class="highlighter-rouge">wParam</code> for <code class="highlighter-rouge">WM_SYSCOMMAND</code></li>
+  <li>[Win32] Bugfix: Derivatives of stream.c were not cleaned up by compile.bat</li>
+  <li>[Win32] Bugfix: Pointer for <code class="highlighter-rouge">GetExtensionsStringARB</code> was not initialized</li>
+  <li>[Win32] Bugfix: Makefiles contained the wrong GLFW API version</li>
+  <li>[Win32] Bugfix: Numeric keypad key symbols would change depending on Num
+Lock state</li>
+  <li>[Win32] Bugfix: <code class="highlighter-rouge">DllMain</code> performed a number of forbidden actions (by
+calling <code class="highlighter-rouge">glfwTerminate</code>)</li>
+</ul>
+
+
+</article>
+
+			</div>
+		</section>
+		<footer>
+			<div class="wrapper">
+				<div class="pure-g-r">
+					<div class="pure-u-1-4">
+						<h4>Community</h4>
+						<ul>
+							<li><a href="community.html">IRC Channel</a></li>
+							<li><a href="http://discourse.glfw.org/">Support Forum</a></li>
+						</ul>
+					</div>
+					<div class="pure-u-1-4">
+						<h4>Development</h4>
+						<ul>
+							<li><a href="/docs/latest/">Documentation</a></li>
+							<li><a href="download.html#bindings">Language Bindings</a></li>
+							<li><a href="https://github.com/glfw">GitHub Repositories</a></li>
+						</ul>
+					</div>
+					<div class="pure-u-1-4">
+						<h4>News</h4>
+						<ul>
+							<li><a href="feed/index.xml">Atom Feed</a></li>
+							<li><a href="news.html">News Archive</a></li>
+							<li><a href="changelog.html">Version History</a></li>
+						</ul>
+					</div>
+					<div class="pure-u-1-4">
+						<h4>About</h4>
+						<ul>
+							<li><a href="faq.html">FAQ</a></li>
+							<li><a href="license.html">License</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

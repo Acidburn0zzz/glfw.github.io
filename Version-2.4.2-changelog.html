@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>GLFW - 2.4.2</title>
+		<link rel="stylesheet" type="text/css" href="css/base-min.css">
+		<link rel="stylesheet" type="text/css" href="css/grids-min.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="alternate" type="application/atom+xml" href="feed/index.xml">
+	</head>
+	<body>
+		<header class="main">
+			<div class="wrapper">
+				<div class="pure-g">
+					<div class="pure-u-1-5">
+						<a href="index.html" id="glfw_home">GLFW</a>
+					</div>
+					<div class="pure-u-4-5">
+						<nav>
+							<a href="documentation.html">Documentation</a>
+							<a href="download.html">Download</a>
+							<a href="media.html">Media</a>
+							<a href="community.html">Community</a>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+		<section>
+			<div class="wrapper">
+				<article>
+<header>
+
+<h2>2.4.2</h2>
+<small>Posted on <time datetime="2004-02-15">February 15, 2004</time>
+</small>
+
+</header>
+
+<ul>
+  <li>Preliminary native Mac OS X support (via the Carbon interface)</li>
+  <li>Preliminary DOS support (DJGPP + Mesa)</li>
+  <li>Changed license to the zlib license (almost identical to the previous GLFW
+license), so now GLFW is OSI Certified</li>
+  <li>Rewrote the GLFW documentation in LaTeX, meaning several improvements (both
+visual and practical)</li>
+  <li>Added the <code class="highlighter-rouge">support</code> folder to the distribution, which includes support for
+various languages</li>
+  <li>[Win32] Added OpenWatcom compiler support (thanks Sebastian Schuberth!)</li>
+  <li>[Win32] Changed fallback timer from <code class="highlighter-rouge">GetTickCount</code> to <code class="highlighter-rouge">timeGetTime</code>, which
+usually provides better resolution</li>
+  <li>[Win32] Bugfix: Accumulator buffer selection should be more robust</li>
+  <li>[Win32] Bugfix: If stereo rendering is requested, and no stereo pixel format
+could be created, <code class="highlighter-rouge">glfwOpenWindow</code> now fails</li>
+  <li>[Win32] Bugfix: <code class="highlighter-rouge">glfwSetWindowSize</code> now sets the size of the client area,
+NOT the entire window, meaning that there is a 1:1 relationship between
+<code class="highlighter-rouge">glfwSetWindowSize</code> and <code class="highlighter-rouge">glfwGetWindowSize</code></li>
+  <li>[X11] Added FreeBSD and QNX support</li>
+  <li>[X11] Added support for non-pthread capable systems</li>
+  <li>[X11] Hopefully more robust configuration script (<code class="highlighter-rouge">compile.sh</code>)</li>
+  <li>[X11] Bugfix: When mouse cursor is hidden, mouse sensitivity is no longer
+degraded</li>
+  <li>[X11] Bugfix: Source files EOL was PC style (CR/LF) in Version 2.4.1 (blame my
+WinCVS configuration)</li>
+  <li>[X11] Bugfix: When a GLFW window is closed, input focus is properly released</li>
+  <li>[X11] Bugfix: Iconification of fullscreen windows should now work properly</li>
+  <li>[x86 CPUs] Improved RDTSC timing (e.g. RDTSC support on single-CPU Intel
+Hyper-Threading enabled systems)</li>
+  <li>[AmigaOS] Added joystick support</li>
+  <li>[AmigaOS] Mouse cursor positioning is now implemented</li>
+  <li>[AmigaOS] Added support for Geek Gadgets GCC</li>
+  <li>[AmigaOS] Bugfix: <code class="highlighter-rouge">glfwGetWindowParam</code> now returns proper values for all
+parameters (except for <code class="highlighter-rouge">GLFW_ACCELERATED</code>)</li>
+</ul>
+
+
+</article>
+
+			</div>
+		</section>
+		<footer>
+			<div class="wrapper">
+				<div class="pure-g-r">
+					<div class="pure-u-1-4">
+						<h4>Community</h4>
+						<ul>
+							<li><a href="community.html">IRC Channel</a></li>
+							<li><a href="http://discourse.glfw.org/">Support Forum</a></li>
+						</ul>
+					</div>
+					<div class="pure-u-1-4">
+						<h4>Development</h4>
+						<ul>
+							<li><a href="/docs/latest/">Documentation</a></li>
+							<li><a href="download.html#bindings">Language Bindings</a></li>
+							<li><a href="https://github.com/glfw">GitHub Repositories</a></li>
+						</ul>
+					</div>
+					<div class="pure-u-1-4">
+						<h4>News</h4>
+						<ul>
+							<li><a href="feed/index.xml">Atom Feed</a></li>
+							<li><a href="news.html">News Archive</a></li>
+							<li><a href="changelog.html">Version History</a></li>
+						</ul>
+					</div>
+					<div class="pure-u-1-4">
+						<h4>About</h4>
+						<ul>
+							<li><a href="faq.html">FAQ</a></li>
+							<li><a href="license.html">License</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

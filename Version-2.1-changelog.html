@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>GLFW - 2.1</title>
+		<link rel="stylesheet" type="text/css" href="css/base-min.css">
+		<link rel="stylesheet" type="text/css" href="css/grids-min.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="alternate" type="application/atom+xml" href="feed/index.xml">
+	</head>
+	<body>
+		<header class="main">
+			<div class="wrapper">
+				<div class="pure-g">
+					<div class="pure-u-1-5">
+						<a href="index.html" id="glfw_home">GLFW</a>
+					</div>
+					<div class="pure-u-4-5">
+						<nav>
+							<a href="documentation.html">Documentation</a>
+							<a href="download.html">Download</a>
+							<a href="media.html">Media</a>
+							<a href="community.html">Community</a>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</header>
+		<section>
+			<div class="wrapper">
+				<article>
+<header>
+
+<h2>2.1</h2>
+<small>Posted on <time datetime="2002-08-08">August  8, 2002</time>
+</small>
+
+</header>
+
+<ul>
+  <li>Added image and texture loading capabilities (support for the TGA file format
+at the moment)</li>
+  <li>Added a new example program (<code class="highlighter-rouge">mipmaps.c</code>) for showing off the automatic mipmap
+generation and texture loading capabilities of GLFW 2.1</li>
+  <li>Removed the separate TGA loader (<code class="highlighter-rouge">tga.c</code> in the examples directory) since
+texture loading is supported natively by GLFW. Also updated the Pong3D demo to
+use GLFW texture loading instead of <code class="highlighter-rouge">tga.c</code>.</li>
+  <li>Improved keyboard handling (e.g. numeric keypad keys can be detected)</li>
+  <li>Added a new example program, <code class="highlighter-rouge">keytest.c</code></li>
+  <li>Changed the <code class="highlighter-rouge">GLFWvidmode</code> structure and the corresponding API functions to
+report pure color bits instead of the confusing (and unportable) “BPP” field</li>
+  <li>Changed <code class="highlighter-rouge">glfwSetWindowSize</code> so that it operates in fullscreen mode too</li>
+  <li>Added mouse wheel support under Windows (not Win95) and X11</li>
+  <li>Added window iconification functions (<code class="highlighter-rouge">glfwInconifyWindow</code> and
+<code class="highlighter-rouge">glfwRestoreWindow</code>)</li>
+  <li>Improved iconification and deactivation handling under both Windows and X11</li>
+  <li>Made it possible to turn on/off key repeat (the default is now no key repeat)</li>
+  <li>Added SGI hardware timer support (<code class="highlighter-rouge">CLOCK_SGI_CYCLE</code>) for improved timer
+resolution for SGI computers</li>
+  <li>Added support for the free Borland C++ Builder 5.x compiler for Windows</li>
+  <li>Made it possible to compiler GLFW as a Windows DLL using any of the supported
+compilers</li>
+  <li>Some constants have changed names (e.g. <code class="highlighter-rouge">GLFW_REDBITS</code> is now called
+<code class="highlighter-rouge">GLFW_RED_BITS</code>)</li>
+  <li>Updated GLFW documentation (GLFW Users Guide and GLFW Reference Manual) to
+reflect the changes in the API</li>
+  <li>[Win32] Bugfix: Corrected Cygwin toplevel makefile entry</li>
+  <li>[Win32] Bugfix: Fixed event lag bug</li>
+  <li>[Win32] Bugfix: Fixed Radeon 8500 crash</li>
+  <li>[X11] Bugfix: Fixed the window close bug</li>
+  <li>[X11] Bugfix: Iconification/deactivation is now detected</li>
+  <li>[X11] Bugfix: Non-OpenGL visuals are not listed anymore</li>
+  <li>[XFree86] Bugfix: Undesired video mode changes are now prevented</li>
+</ul>
+
+
+</article>
+
+			</div>
+		</section>
+		<footer>
+			<div class="wrapper">
+				<div class="pure-g-r">
+					<div class="pure-u-1-4">
+						<h4>Community</h4>
+						<ul>
+							<li><a href="community.html">IRC Channel</a></li>
+							<li><a href="http://discourse.glfw.org/">Support Forum</a></li>
+						</ul>
+					</div>
+					<div class="pure-u-1-4">
+						<h4>Development</h4>
+						<ul>
+							<li><a href="/docs/latest/">Documentation</a></li>
+							<li><a href="download.html#bindings">Language Bindings</a></li>
+							<li><a href="https://github.com/glfw">GitHub Repositories</a></li>
+						</ul>
+					</div>
+					<div class="pure-u-1-4">
+						<h4>News</h4>
+						<ul>
+							<li><a href="feed/index.xml">Atom Feed</a></li>
+							<li><a href="news.html">News Archive</a></li>
+							<li><a href="changelog.html">Version History</a></li>
+						</ul>
+					</div>
+					<div class="pure-u-1-4">
+						<h4>About</h4>
+						<ul>
+							<li><a href="faq.html">FAQ</a></li>
+							<li><a href="license.html">License</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
